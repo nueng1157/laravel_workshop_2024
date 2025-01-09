@@ -6,8 +6,8 @@ use Livewire\Component;
 
 class Navbar extends Component {
     public $user_name;
-    //public $showModal = false;
-
+    public $showModal = false;
+    
     public function mount() {
         $this->user_name = session()->get('user_name');
     }

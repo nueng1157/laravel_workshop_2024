@@ -31,6 +31,7 @@ class Signin extends Component
             $this->errorPassword = $validator->errors()->get('password')[0] ?? null;
         } else {
             $user = User::where('name', $this->username)
+            ->where('password', $this->password)
             ->first();
 
             if (!$user){
@@ -44,11 +45,7 @@ class Signin extends Component
         }
     }
 
-
-
-    
-    public function 
-    render()
+    public function render()
     {
         return view('livewire.signin');
     }
