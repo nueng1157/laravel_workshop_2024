@@ -18,6 +18,7 @@ class Room extends Component {
     public $to_number;
     public $price_per_day;
     public $price_per_month;
+    public $nameForDelete;
 
     public function mount() {
         $this->fetchData();
@@ -37,9 +38,10 @@ class Room extends Component {
         $this->price_month = $room->price_per_month;
     }
 
-    public function openModalDelete($id) {
+    public function openModalDelete($id,$name) {
         $this->showModalDelete = true;
         $this->id = $id;
+        $this->nameForDelete = $name;
     }
 
     public function updateRoom() {
