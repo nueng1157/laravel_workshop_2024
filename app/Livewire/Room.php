@@ -26,6 +26,11 @@ class Room extends Component {
 
     public function openModal() {
         $this->showModal = true;
+        $this->from_number = '';
+        $this->to_number = '';
+        $this->price_per_day = '';
+        $this->price_per_month = '';
+        
     }
 
     public function openModalEdit($id) {
@@ -38,10 +43,12 @@ class Room extends Component {
         $this->price_month = $room->price_per_month;
     }
 
-    public function openModalDelete($id,$name) {
+    public function openModalDelete($id) {
         $this->showModalDelete = true;
         $this->id = $id;
-        $this->nameForDelete = $name;
+
+        $room = RoomModel::find($id);
+        $this->nameForDelete = $room->$name;
     }
 
     public function updateRoom() {

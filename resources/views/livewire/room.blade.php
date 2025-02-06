@@ -24,8 +24,8 @@
                 @foreach ($rooms as $room)
                     <tr>
                         <td class="text-left">{{ $room->name }}</td>
-                        <td class="text-left">{{ number_format($room->price_per_day, 2) }}</td>
-                        <td class="text-left">{{ number_format($room->price_per_month, 2) }}</td>
+                        <td class="text-right">{{ number_format($room->price_per_day, 2) }}</td>
+                        <td class="text-right">{{ number_format($room->price_per_month, 2) }}</td>
                         <td class="text-center">
                             <button class="btn-edit mr-2" wire:click="openModalEdit({{ $room->id }})">
                                 <i class="fa fa-pencil mr-2"></i>

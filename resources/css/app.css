@@ -102,3 +102,22 @@
  .table th:last-child {
     @apply rounded-tr-2xl;
  }
+
+ .table td {
+    @apply pl-3 p-2 bg-gray-100;
+ }
+ .table tr:last-child td:first-child {
+    @apply rounded-bl-2xl;
+ }
+
+ .table tr:last-child td:last-child {
+    @apply rounded-br-2xl;
+ }
+
+ tbody tr {
+    @apply border-b border-gray-300;
+ }
+ 
+ tbody tr:last-child {
+     @apply border-b-0;
+ }
